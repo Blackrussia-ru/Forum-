@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>BLACK RUSSIA — Форум</title>
+    <style>
+        body {
+            background-color: #2E2E2E;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .banner {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 60px 20px 40px;
+            margin-top: 40px;
+        }
+        .banner h2 {
+            font-size: 28px;
+        }
+        .banner p {
+            font-size: 16px;
+        }
+        .banner button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #FF2E2E;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .login-box {
+            background-color: #3A3A3A;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+        }
+        .login-box button {
+            width: 100%;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .login-box small {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BLACK RUSSIA</h1>
+    </header>
+
+    <div class="banner">
+        <h2>Добро пожаловать!</h2>
+        <p>Для того, чтобы начать взаимодействовать с форумом Вам необходимо будет зарегистрировать либо войти в аккаунт.</p>
+        <button onclick="register()">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+    </div>
+
+    <div class="login-box">
+        <label for="username">Имя пользователя или email:</label>
+        <input type="text" id="username" placeholder="Введите имя">
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" placeholder="Введите пароль">
+
+        <button onclick="login()">ВОЙТИ</button>
+        <small>У Вас ещё нет учётной записи? Зарегистрируйтесь</small>
+    </div>
+
+    <script>
+        function login() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            if (!user || !pass) {
+                alert("Пожалуйста, заполните все поля!");
+                return;
+            }
+
+            alert("Добро пожаловать, " + user + "!");
+        }
+
+        function register() {
+            alert("Форма регистрации временно недоступна.");
+        }
+    </script>
+</body>
+</html>
